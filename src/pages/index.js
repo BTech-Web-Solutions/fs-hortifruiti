@@ -1,118 +1,133 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import whatsapp from "../../public/assets/whatsapp.png";
+import pessoa1 from "../../public/assets/pessoa1.png";
+import fruits from "../../public/assets/fruits.png";
+import ServicesCard from "@/components/ServicesCard";
+import { Mail, MapPin } from "lucide-react";
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.js</code>
+    <>
+      <div
+        className="bg-[#DCE9E2] py-11 px-4"
+        style={{
+          height: "calc(100vh + 280px)",
+        }}
+      >
+        <h1 className="text-[#00856F] w-full flex justify-center text-sm font-semibold tracking-wide">
+          BOAS-VINDAS A FS HORTIFRUTI 👋
+        </h1>
+
+        <h3 className="text-[#212529] text-3xl font-bold text-center mt-4">
+          Seu pedido entregue em seu comércio!
+        </h3>
+
+        <p className="text-[#495057] text-xl leading-7 mt-16 text-center">
+          Com a FS é fácil, em poucos cliques você faz seu pedido sem dor de
+          cabeça. Clique no botão abaixo e confira nossas ofertas!
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+        <div className="w-full flex justify-center">
+          <button className="bg-[#00856F] w-52 h-14 rounded-full mt-8 flex items-center justify-center gap-2">
+            <img src={whatsapp.src} alt="" />
+            <h1 className="font-bold tracking-wider text-sm">FAZER PEDIDO!</h1>
+          </button>
+        </div>
+
+        <div className="mt-7 flex justify-center items-center w-full">
+          <img src={pessoa1.src} alt="" />
+        </div>
+
+        <div className="bg-[#FFFAF1] py-10 px-20 rounded-[6px] z-10 relative">
+          <div className="flex flex-col justify-center items-center w-full">
+            <h1 className="text-[#212529] font-bold text-5xl mb-1">+3.500</h1>
+            <p className="text-[#00856F] text-lg tracking-tight mb-16">
+              Pedidos entregues
+            </p>
+          </div>
+
+          <div className="flex flex-col justify-center items-center w-full">
+            <h1 className="text-[#212529] font-bold text-5xl mb-1">+15</h1>
+            <p className="text-[#00856F] text-lg tracking-tight mb-16">
+              Comércios
+            </p>
+          </div>
+
+          <div className="flex flex-col justify-center items-center w-full">
+            <h1 className="text-[#212529] font-bold text-5xl mb-1">+10</h1>
+            <p className="text-[#00856F] text-lg tracking-tight">
+              Anos de mercado
+            </p>
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="bg-[#F7F9F9]">
+        <div className="pt-[300px] w-fuill text-center">
+          <p className="text-[#00856F] font-semibold">SERVIÇOS</p>
+          <h1 className="text-[#212529] font-bold text-4xl mb-1 text-center px-8">{`Algumas vantagens :)`}</h1>
+        </div>
+
+        <div className="flex flex-col gap-10 mt-6 pb-10">
+          <ServicesCard
+            title="Compre hoje e receba amanhã"
+            desc="Sabemos o quão um comercio precisa que suas mercadorias estejam em estoque para começar a produção, pensando nisso a nossa logistica garante que você vai receber no dia seguinte após seu pedido!"
+          />
+
+          <ServicesCard
+            title="Atendimento 24hrs"
+            desc="Para garantir que não haja dúvidas em nosso serviço, oferecemos atendimento via Whatsapp 24 horas."
+          />
+
+          <ServicesCard
+            title="Produtos de qualidade!"
+            desc="Selecionamos a mão seu produto, garantimos que irá receber a melhor qualidade possível. Além disso os Legumes, Frutas e Verduras vem direto do CEAGESP. "
+          />
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div className="bg-[#FFFAF1] px-6">
+        <h1 className="text-[#00856F] font-semibold tracking-wide pt-28">
+          SOBRE NÓS
+        </h1>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <h1 className="text-[#212529] font-bold text-3xl pr-2 mt-8">
+          Entenda quem somos e por que existimos
+        </h1>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
+        <p className="text-[#495057] mt-6 font-normal">
+          A FS HORTIFRUTI tras uma forma do seu comercio receber as mercadorias
+          com facilidade, sem transito, estresse e perca de tempo. Em poucos
+          cliques é realizado o pedido e pronto, no outro dia de manhã sua
+          mercadoria está no local desejado!
+        </p>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        <img src={fruits.src} alt="" className="mt-6 pb-20" />
       </div>
-    </main>
-  )
+
+      <div className="bg-white px-6 pt-28 pb-24">
+        <h1 className="text-[#212529] font-bold text-3xl pr-5">
+          Entre em contato com a gente!
+        </h1>
+
+        <div className="flex gap-2 items-center mt-8">
+          <MapPin className="text-[#00856F] h-14" />
+          <p className="text-[#495057] font-normal">
+            Parque dom pedro II, 190 - SP
+          </p>
+        </div>
+
+        <div className="flex gap-2 items-center -mt-4">
+          <Mail className="text-[#00856F] h-14" />
+          <p className="text-[#495057] font-normal">fs.hortifruti@gmail.com</p>
+        </div>
+
+        <div className="w-full flex justify-start">
+          <button className="bg-[#00856F] w-52 h-14 rounded-full mt-8 flex items-center justify-center gap-2">
+            <img src={whatsapp.src} alt="" />
+            <h1 className="font-bold tracking-wider text-sm">FAZER PEDIDO!</h1>
+          </button>
+        </div>
+      </div>
+    </>
+  );
 }
