@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../public/assets/logo.png";
+import AsideMenu from "./AsideMenu";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <header className="bg-[#DCE9E2] h-[72px]">
+      <AsideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       <div className="flex justify-between items-center h-full p-5">
         <img src={logo.src} alt="" className="h-8" />
 
-        <div>
+        <div onClick={() => setIsMenuOpen(true)}>
           <svg
             width="50"
             height="50"

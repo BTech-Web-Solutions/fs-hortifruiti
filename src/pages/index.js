@@ -27,7 +27,7 @@ export default function Home() {
         </p>
 
         <div className="w-full flex justify-center">
-          <button className="bg-[#00856F] w-52 h-14 rounded-full mt-8 flex items-center justify-center gap-2">
+          <button className="bg-[#00856F] w-52 h-14 rounded-full mt-8 flex items-center justify-center gap-2 hover:bg-[#00453A] hover:text-zinc-200">
             <img src={whatsapp.src} alt="" />
             <h1 className="font-bold tracking-wider text-sm">FAZER PEDIDO!</h1>
           </button>
@@ -62,9 +62,9 @@ export default function Home() {
       </div>
 
       <div className="bg-[#F7F9F9]">
-        <div className="pt-[300px] w-fuill text-center">
+        <div className="pt-[270px] w-full text-center">
           <p className="text-[#00856F] font-semibold">SERVIÇOS</p>
-          <h1 className="text-[#212529] font-bold text-4xl mb-1 text-center px-8">{`Algumas vantagens :)`}</h1>
+          <h1 className="text-[#212529] font-bold text-4xl mb-1 text-center px-8 mt-4">{`Algumas vantagens :)`}</h1>
         </div>
 
         <div className="flex flex-col gap-10 mt-6 pb-10">
@@ -122,7 +122,7 @@ export default function Home() {
         </div>
 
         <div className="w-full flex justify-start">
-          <button className="bg-[#00856F] w-52 h-14 rounded-full mt-8 flex items-center justify-center gap-2">
+          <button className="bg-[#00856F] w-52 h-14 rounded-full mt-8 flex items-center justify-center gap-2 hover:bg-[#00453A] hover:text-zinc-200">
             <img src={whatsapp.src} alt="" />
             <h1 className="font-bold tracking-wider text-sm">FAZER PEDIDO!</h1>
           </button>
